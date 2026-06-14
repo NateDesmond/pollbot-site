@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Poll Bot — set up your Telegram scheduling bot in ~20 minutes</title>
+  <meta name="description" content="Poll Bot is a friendly Telegram scheduling bot run from one Google Sheet. It posts RSVP polls, sends reminders, wishes happy birthday, and tracks attendance — no coding required." />
+  <meta name="theme-color" content="#5e6ad2" />
+  <meta property="og:title" content="Poll Bot — a friendly Telegram scheduling bot" />
+  <meta property="og:description" content="Set it up in about 20 minutes, no coding required. RSVP polls, reminders, birthdays, and attendance tracking from one Google Sheet." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===================== TOP BAR ===================== -->
+  <nav class="site-nav" aria-label="Primary">
+    <div class="site-nav__inner">
+      <a class="site-nav__brand" href="#top">📊 Poll Bot</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Contents</button>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="hero" id="top">
+    <div class="container">
+      <div class="hero__logo" aria-hidden="true">📊</div>
+      <h1>Poll Bot</h1>
+      <p class="hero__tagline">A friendly scheduling bot for your Telegram group — set it up in about 20 minutes, no coding required.</p>
+      <p class="hero__desc">It posts RSVP polls before each meeting, sends reminders, wishes people happy birthday, and tracks attendance automatically — all driven from one Google Sheet.</p>
+      <p class="hero__audience">Perfect for a church discipleship group (DG), a small group / community group (CG), a sports team, a club, or any group that meets on a schedule.</p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="https://docs.google.com/spreadsheets/d/1-Rb3YjKW17p5A1QzJ-YvjGC64wqtXET6XEJggYZOXBg/copy" target="_blank" rel="noopener">📄 Make your copy of the Poll Bot sheet</a>
+        <a class="btn btn--secondary" href="#what">See how it works ↓</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="docs">
+
+    <!-- ===================== SIDEBAR TOC ===================== -->
+    <aside class="toc" id="nav-links" aria-label="Section navigation">
+      <p class="toc__title">On this page</p>
+      <ul class="toc__links">
+        <li><a href="#what">What it does</a></li>
+        <li><a href="#before">Before you start</a></li>
+        <li><a href="#setup">Set-up steps</a></li>
+        <li><a href="#test">Test it</a></li>
+        <li><a href="#daily">Day-to-day</a></li>
+        <li><a href="#trouble">Troubleshooting</a></li>
+        <li><a href="#checklist">Checklist</a></li>
+      </ul>
+    </aside>
+
+  <main id="main">
+
+    <!-- ===================== WHAT IT DOES ===================== -->
+    <section id="what">
+      <div class="container">
+        <h2>What it does</h2>
+        <p class="section__lead">Four jobs, all running quietly in the background from your sheet.</p>
+        <div class="features">
+          <div class="feature">
+            <div class="feature__icon" aria-hidden="true">📊</div>
+            <h3>Auto RSVP polls</h3>
+            <p>Posts a poll before every event — “Coming / Not coming / Joining online…”.</p>
+          </div>
+          <div class="feature">
+            <div class="feature__icon" aria-hidden="true">⏰</div>
+            <h3>Reminders</h3>
+            <p>An optional nudge on the day (or X days before) the meeting.</p>
+          </div>
+          <div class="feature">
+            <div class="feature__icon" aria-hidden="true">🎂</div>
+            <h3>Birthday messages</h3>
+            <p>Automatic happy-birthday posts to the group.</p>
+          </div>
+          <div class="feature">
+            <div class="feature__icon" aria-hidden="true">✅</div>
+            <h3>Attendance tracking</h3>
+            <p>A dashboard that fills itself in from poll answers.</p>
+          </div>
+        </div>
+
+        <div class="callout callout--note">
+          <span class="callout__label">📝 Note</span>
+          <p>Everything is controlled from tabs in your copy of the sheet — you never touch the code.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== BEFORE YOU START ===================== -->
+    <section id="before" class="section--alt">
+      <div class="container">
+        <h2>Before you start</h2>
+        <p class="section__lead">Two things, and about 20 minutes.</p>
+        <ul class="facts">
+          <li><span aria-hidden="true">①</span><span>A <b>Telegram account</b>.</span></li>
+          <li><span aria-hidden="true">②</span><span>The <b>Telegram group</b> where the bot should post — or create a new one.</span></li>
+          <li><span aria-hidden="true">⏱️</span><span><b>Time needed:</b> roughly 20 minutes, start to finish.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== SET-UP STEPS ===================== -->
+    <section id="setup">
+      <div class="container">
+        <h2>Set-up steps</h2>
+        <p class="section__lead">Follow these in order. Each one builds on the last.</p>
+
+        <p style="margin: 0 0 1.5rem;">
+          <a class="btn btn--primary" href="https://docs.google.com/spreadsheets/d/1-Rb3YjKW17p5A1QzJ-YvjGC64wqtXET6XEJggYZOXBg/copy" target="_blank" rel="noopener">📄 Make your copy of the Poll Bot sheet</a>
+        </p>
+
+        <div class="steps">
+
+          <!-- STEP 1 -->
+          <article class="step">
+            <div class="step__head">
+              <div class="step__num" aria-hidden="true">1</div>
+              <h3>Make your own copy of the sheet</h3>
+            </div>
+            <div class="step__body prose">
+              <p>Click the <strong>“Make your copy”</strong> button above. Give it a name (e.g. <em>“Friday DG — Poll Bot”</em>). From now on you only work in <strong>your</strong> copy.</p>
+              <div class="callout callout--note">
+                <span class="callout__label">📝 Note</span>
+                <p>Making a copy automatically brings the code (the “Apps Script”) with it — <strong>but the automatic schedule does not copy over</strong>. You’ll switch it on in <a href="#step6">Step 6</a>.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- STEP 2 -->
+          <article class="step">
+            <div class="step__head">
+              <div class="step__num" aria-hidden="true">2</div>
+              <h3>Create your Telegram bot</h3>
+            </div>
+            <div class="step__body prose">
+              <p>In Telegram, open a chat with <code>@BotFather</code>. Send <code>/newbot</code> and follow the prompts — you’ll pick a name and a username ending in <em>“bot”</em>. BotFather replies with a <strong>bot token</strong> that looks like <code>1234567890:AAH…xyz</code>.</p>
+              <div class="callout callout--warn">
+                <span class="callout__label">⚠️ Warning</span>
+                <p>Keep this token private — it’s the password to your bot.</p>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- STEP 3 -->
+          <article class="step">
+            <div class="step__head">
+              <div class="step__num" aria-hidden="true">3</div>
+              <h3>Add the bot to your group</h3>
+            </div>
+            <div class="step__body prose">
+              <p>Open your group → <strong>Add members</strong> → add your new bot. Then make the bot an <strong>Admin</strong> of the group.</p>
+              <div class="callout callout--tip">
+                <span class="callout__label">💡 Tip</span>
+                <p>Admin lets the bot post polls and messages, and read poll answers reliably.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- STEP 4 -->
+          <article class="step">
+            <div class="step__head">
+              <div class="step__num" aria-hidden="true">4</div>
+              <h3>Find your group’s ID</h3>
+            </div>
+            <div class="step__body prose">
+              <p>In the group, send any message (e.g. <em>“hello”</em>). Then, in a browser, visit this URL — replacing <code>&lt;TOKEN&gt;</code> with your bot token:</p>
+              <div class="snippet">
+                <code>https://api.telegram.org/bot&lt;TOKEN&gt;/getUpdates</code>
+                <button class="snippet__copy" type="button" data-copy="https://api.telegram.org/bot<TOKEN>/getUpdates">Copy</button>
+              </div>
+              <p>Look for <code>"chat":{"id":-100…}</code> — that negative number is your <strong>Group ID</strong> (groups usually start with <code>-100</code>).</p>
+              <div class="callout callout--tip">
+                <span class="callout__label">💡 Tip</span>
+                <p>Easier alternative: add <code>@RawDataBot</code> to the group briefly; it prints the chat ID. Then remove it.</p>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- STEP 5 -->
+          <article class="step">
+            <div class="step__head">
+              <div class="step__num" aria-hidden="true">5</div>
+              <h3>Plug your token &amp; group ID into the sheet</h3>
+            </div>
+            <div class="step__body prose">
+              <p>Go to the <strong>Settings</strong> tab of your copy:</p>
+              <ul>
+                <li>Paste your bot token into the <strong>“Telegram Bot ID”</strong> field — cell <span class="cell-ref">E28</span>.</li>
+                <li>Paste your Group ID into the <strong>“Telegram Group ID”</strong> field — cell <span class="cell-ref">E29</span>.</li>
+              </ul>
+
+            </div>
+          </article>
+
+          <!-- STEP 6 -->
+          <article class="step" id="step6">
+            <div class="step__head">
+              <div class="step__num" aria-hidden="true">6</div>
+              <h3>Authorize and turn on the schedule</h3>
+            </div>
+            <div class="step__body prose">
+              <p>Reload the sheet. A new menu — <strong>“Small Group Assistant”</strong> — appears in the top bar.</p>
+              <p>Click <strong>Small Group Assistant → Send Poll Manually</strong>. The first time, Google asks you to <strong>authorize the script</strong> — approve it (it’s your own copy).</p>
+              <div class="callout callout--note">
+                <span class="callout__label">📝 Note</span>
+                <p>If you see <em>“Google hasn’t verified this app,”</em> click <strong>Advanced → Go to (project) → Allow</strong>. This is normal for personal Apps Scripts.</p>
+              </div>
+
+              <p>Now turn on the daily schedule: <strong>Extensions → Apps Script</strong> → click the <strong>clock icon (Triggers)</strong> → <strong>Add Trigger</strong>, twice:</p>
+              <ul>
+                <li><strong>Trigger 1:</strong> function <code>morningTasks</code> — Time-driven, Day timer, e.g. <strong>7–8&nbsp;am</strong>.</li>
+                <li><strong>Trigger 2:</strong> function <code>eveningTasks</code> — Time-driven, Day timer, e.g. <strong>8–9&nbsp;pm</strong>.</li>
+              </ul>
+              <div class="callout callout--tip">
+                <span class="callout__label">💡 What each one does</span>
+                <p><code>morningTasks</code> sends polls, reminders and birthdays, and tidies up. <code>eveningTasks</code> collects the latest poll answers.</p>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- STEP 7 -->
+          <article class="step">
+            <div class="step__head">
+              <div class="step__num" aria-hidden="true">7</div>
+              <h3>Fill in your own content</h3>
+            </div>
+            <div class="step__body prose">
+              <p><strong>Calendar tab</strong> — each row is one meeting:</p>
+              <ul>
+                <li><strong>Date</strong> — the meeting date (the bot looks at the next event within 30 days).</li>
+                <li><strong>Poll Question</strong> — what the poll asks (leave blank to skip the poll that date).</li>
+                <li><strong>Answer 1–6</strong> — the RSVP options (Answers 2–6 are optional).</li>
+                <li><strong>Reminder</strong> (far-right column) — the message sent on reminder day, if reminders are on.</li>
+              </ul>
+
+              <p><strong>Birthdays tab</strong> (optional) — a row per person: Name, Day, Month, optional Year, and a note. On someone’s birthday the bot posts your birthday message.</p>
+
+              <p><strong>Settings tab preferences:</strong></p>
+              <ul>
+                <li>Day to send poll.</li>
+                <li>Collect responses X days after event (<code>0</code> = on the day).</li>
+                <li>Automatically hide old events.</li>
+                <li>Send reminders? (On/Off + days before).</li>
+                <li>Send birthday texts? (On/Off; the message uses <code>{{Name}}</code>, which is swapped for each person’s name).</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TEST IT ===================== -->
+    <section id="test" class="section--alt">
+      <div class="container">
+        <h2>Optional: test it with a private test group first</h2>
+        <p class="section__lead">The smart, low-stress way to make sure everything works before you unleash it on your real group.</p>
+
+        <div class="callout callout--tip">
+          <span class="callout__label">💡 Why bother</span>
+          <p>You can learn and experiment freely — try polls, reminders and birthdays — without spamming your real group while you figure things out.</p>
+        </div>
+
+        <div class="prose">
+          <h3>1. Create a test group</h3>
+          <p>In Telegram → <strong>New Group</strong> → name it e.g. <em>“Poll Bot Test”</em> → add yourself <strong>and at least one other member</strong> (a friend, or your own second account). Telegram needs at least one other member besides the bot. Then add your Poll Bot to it and make it <strong>Admin</strong> (same as Step 3).</p>
+
+          <h3>2. Point the sheet at the test group</h3>
+          <p>Get the <strong>test</strong> group’s ID (same method as <a href="#setup">Step 4</a>) and temporarily put it in <strong>Settings → Telegram Group ID</strong> (<span class="cell-ref">E29</span>).</p>
+
+          <h3>3. Add a test event</h3>
+          <p>In the <strong>Calendar</strong> tab, add a row dated <strong>today or tomorrow</strong>, with a Poll Question, a couple of Answer options, and a Reminder message.</p>
+
+          <h3>4. Test the poll</h3>
+          <p><strong>Small Group Assistant → Send Poll Manually.</strong> Confirm the poll appears in your test group, and vote on it from your account(s).</p>
+
+          <h3>5. Test attendance collection</h3>
+          <p>Run it again later — or run the <code>eveningTasks</code> function directly: open <strong>Extensions → Apps Script</strong>, pick <code>eveningTasks</code> in the function dropdown, click <strong>Run</strong>. Then check that the <strong>Poll Responses / Attendance</strong> tabs fill in.</p>
+
+          <h3>6. Test reminders</h3>
+          <p>In <strong>Settings</strong>, set <em>“Send reminders?”</em> to <strong>On</strong> and reminder days to <code>0</code>. In the Apps Script editor, run the <code>morningTasks</code> function and confirm a reminder posts (it replies to the poll).</p>
+
+          <h3>7. Test birthdays</h3>
+          <p>Add a <strong>Birthdays</strong> row with <strong>today’s</strong> day/month, set <em>“Send birthday texts?”</em> to <strong>On</strong>, run <code>morningTasks</code>, and confirm the birthday message posts.</p>
+
+          <div class="callout callout--note">
+            <span class="callout__label">📝 Note</span>
+            <p>Reminders and birthdays have no menu button, so you trigger them for testing by running <code>morningTasks</code> manually in the Apps Script editor.</p>
+          </div>
+
+          <h3>8. Go live</h3>
+          <p>Once you’re happy: set <strong>Settings → Telegram Group ID</strong> back to your <strong>real</strong> group’s ID, remove or fix up the test rows in Calendar/Birthdays, and you’re ready. You can delete the test group (and remove the bot from it) afterwards.</p>
+
+          <div class="callout callout--tip">
+            <span class="callout__label">💡 Tip</span>
+            <p>If you used one bot for both, you don’t need a new token — just switch the Group ID. If you’d rather fully isolate testing, create a separate test bot with its own token via <code>@BotFather</code>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DAY-TO-DAY ===================== -->
+    <section id="daily">
+      <div class="container">
+        <h2>Day-to-day use</h2>
+        <p class="section__lead">Once it’s running, there’s very little to do.</p>
+        <ul class="daily">
+          <li><strong>Mostly hands-off.</strong> Keep the Calendar a few weeks ahead and the bot does the rest.</li>
+          <li><strong>Send a poll early / manually.</strong> Small Group Assistant → Send Poll Manually.</li>
+          <li><strong>See who’s coming.</strong> The Attendance dashboard fills in from poll answers automatically.</li>
+        </ul>
+        <div class="callout callout--warn">
+          <span class="callout__label">⚠️ Warning</span>
+          <p>Don’t delete old polls in the <strong>Polls Sent / Poll Responses</strong> tabs — it can corrupt past attendance records. Hide rows instead.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TROUBLESHOOTING ===================== -->
+    <section id="trouble" class="section--alt">
+      <div class="container">
+        <h2>Troubleshooting</h2>
+        <p class="section__lead">The usual suspects, and how to fix them.</p>
+        <dl class="trouble">
+          <div class="trouble__item">
+            <dt>No poll posted</dt>
+            <dd>Is there a Calendar row with a <strong>future date AND a Poll Question</strong>? Is the token / Group ID filled in (Settings <span class="cell-ref">E28</span> / <span class="cell-ref">E29</span>)? Are the two triggers added (<a href="#step6">Step 6</a>)?</dd>
+          </div>
+          <div class="trouble__item">
+            <dt>“Unauthorized” error</dt>
+            <dd>Re-run <strong>Send Poll Manually</strong> and approve the authorization prompt.</dd>
+          </div>
+          <div class="trouble__item">
+            <dt>Poll posts but answers don’t show</dt>
+            <dd>Make sure the bot is a group <strong>Admin</strong> and the poll is <strong>non-anonymous</strong> (it is by default).</dd>
+          </div>
+          <div class="trouble__item">
+            <dt>Nothing happens automatically</dt>
+            <dd>Re-check the two <strong>time-driven triggers</strong> — they don’t copy over with the sheet.</dd>
+          </div>
+          <div class="trouble__item">
+            <dt>Second poll won’t send</dt>
+            <dd>A poll already exists for that event date. Delete the existing Telegram poll first, or change the event date.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===================== CHECKLIST ===================== -->
+    <section id="checklist">
+      <div class="container">
+        <h2>Launch checklist</h2>
+        <p class="section__lead">Tick these off and you’re live.</p>
+        <ul class="checklist">
+          <li><input type="checkbox" id="c1" /><label for="c1">Token + Group ID in Settings (<span class="cell-ref">E28</span> / <span class="cell-ref">E29</span>)</label></li>
+          <li><input type="checkbox" id="c2" /><label for="c2">Both triggers added (<code>morningTasks</code> + <code>eveningTasks</code>)</label></li>
+          <li><input type="checkbox" id="c3" /><label for="c3">Tested in a test group</label></li>
+          <li><input type="checkbox" id="c4" /><label for="c4">Calendar filled a few weeks ahead</label></li>
+          <li><input type="checkbox" id="c5" /><label for="c5">(If sharing this as a template to others) sheet shared “Anyone with the link → Viewer”</label></li>
+        </ul>
+        <p class="closing-line">Keep your bot token private — if it leaks, go to <code>@BotFather</code> → your bot → <strong>Revoke token</strong>, then paste the new one into Settings.</p>
+      </div>
+    </section>
+
+  </main>
+
+  </div><!-- /.docs -->
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>Poll Bot · made with <span class="heart" aria-hidden="true">♥</span><span class="visually-hidden">love</span> by Urban Algorithm</p>
+      <p>This page is a living guide — it may be updated as the bot improves.</p>
+      <p>Questions? Reach out to your group’s Poll Bot admin.</p>
+    </div>
+  </footer>
+
+  <!-- Optional, vanilla JS enhancements. Page is fully usable without it. -->
+  <script>
+    (function () {
+      // Mobile contents (sidebar TOC) toggle
+      var toggle = document.querySelector('.nav-toggle');
+      var links = document.getElementById('nav-links');
+      if (toggle && links) {
+        toggle.addEventListener('click', function () {
+          var open = links.classList.toggle('is-open');
+          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+        // Close menu after tapping a link (mobile)
+        links.addEventListener('click', function (e) {
+          if (e.target.tagName === 'A') {
+            links.classList.remove('is-open');
+            toggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+
+      // Scroll-spy: highlight the current section in the sidebar TOC.
+      // Pure progressive enhancement — degrades gracefully without JS / support.
+      if (links && 'IntersectionObserver' in window) {
+        var tocLinks = links.querySelectorAll('a[href^="#"]');
+        var byId = {};
+        tocLinks.forEach(function (a) {
+          byId[a.getAttribute('href').slice(1)] = a;
+        });
+        var sections = [];
+        Object.keys(byId).forEach(function (id) {
+          var el = document.getElementById(id);
+          if (el) sections.push(el);
+        });
+        var setActive = function (id) {
+          tocLinks.forEach(function (a) { a.classList.remove('is-active'); a.removeAttribute('aria-current'); });
+          var active = byId[id];
+          if (active) { active.classList.add('is-active'); active.setAttribute('aria-current', 'true'); }
+        };
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) setActive(entry.target.id);
+          });
+        }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+        sections.forEach(function (s) { observer.observe(s); });
+      }
+
+      // Copy-to-clipboard buttons
+      document.querySelectorAll('.snippet__copy').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var text = btn.getAttribute('data-copy') || '';
+          var done = function () {
+            var original = btn.textContent;
+            btn.textContent = 'Copied!';
+            btn.classList.add('is-copied');
+            setTimeout(function () {
+              btn.textContent = original;
+              btn.classList.remove('is-copied');
+            }, 1600);
+          };
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(done, function () {});
+          } else {
+            // Legacy fallback
+            var ta = document.createElement('textarea');
+            ta.value = text;
+            document.body.appendChild(ta);
+            ta.select();
+            try { document.execCommand('copy'); done(); } catch (e) {}
+            document.body.removeChild(ta);
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
