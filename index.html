@@ -171,15 +171,18 @@
               <h3>Find your group’s ID</h3>
             </div>
             <div class="step__body prose">
-              <p>In the group, send any message (e.g. <em>“hello”</em>). Then, in a browser, visit this URL - replacing <code>&lt;TOKEN&gt;</code> with your bot token:</p>
+              <p>The quickest way: open <a href="https://web.telegram.org" target="_blank" rel="noopener">Telegram Web</a> in your browser, click into your group, and look at the address bar. The negative number after the <code>#</code> is your <strong>Group ID</strong>:</p>
               <div class="snippet">
-                <code>https://api.telegram.org/bot&lt;TOKEN&gt;/getUpdates</code>
-                <button class="snippet__copy" type="button" data-copy="https://api.telegram.org/bot<TOKEN>/getUpdates">Copy</button>
+                <code>https://web.telegram.org/k/#-1001371481828</code>
               </div>
-              <p>Look for <code>"chat":{"id":-100…}</code> - that negative number is your <strong>Group ID</strong> (groups usually start with <code>-100</code>).</p>
+              <p>Copy that whole number, including the minus sign. It looks like <code>-1001371481828</code> for larger groups, or a shorter <code>-123456789</code> for smaller ones.</p>
               <div class="callout callout--tip">
                 <span class="callout__label">💡 Tip</span>
-                <p>Easier alternative: add <code>@RawDataBot</code> to the group briefly; it prints the chat ID. Then remove it.</p>
+                <p>Can’t spot it in the URL? Add <code>@RawDataBot</code> to the group for a moment - it prints the chat ID right in the chat - then remove it.</p>
+              </div>
+              <div class="callout callout--note">
+                <span class="callout__label">📝 Advanced fallback</span>
+                <p>Send any message in the group, then visit <code>https://api.telegram.org/bot&lt;TOKEN&gt;/getUpdates</code> (replace <code>&lt;TOKEN&gt;</code> with your token) and look for <code>"chat":{"id":-100…}</code>.</p>
               </div>
 
             </div>
@@ -366,7 +369,6 @@
           <li><input type="checkbox" id="c2" /><label for="c2">Both triggers added (<code>morningTasks</code> + <code>eveningTasks</code>)</label></li>
           <li><input type="checkbox" id="c3" /><label for="c3">Tested in a test group</label></li>
           <li><input type="checkbox" id="c4" /><label for="c4">Calendar filled a few weeks ahead</label></li>
-          <li><input type="checkbox" id="c5" /><label for="c5">(If sharing this as a template to others) sheet shared “Anyone with the link → Viewer”</label></li>
         </ul>
         <p class="closing-line">Keep your bot token private - if it leaks, go to <code>@BotFather</code> → your bot → <strong>Revoke token</strong>, then paste the new one into Settings.</p>
       </div>
