@@ -1,11 +1,11 @@
 /* ===========================================================================
-   Poll Bot — onboarding guide styles
+   Poll Bot - onboarding guide styles
    Refined Notion / Linear documentation aesthetic. Light theme.
    Plain CSS, no frameworks, no build step.
    =========================================================================== */
 
 :root {
-  /* Accent — Linear-style indigo */
+  /* Accent - Linear-style indigo */
   --accent: #5e6ad2;
   --accent-dark: #4f5ac0;
   --accent-soft: #f0f1fb;
@@ -342,7 +342,7 @@ section > .container > h2 {
   font-size: 1.02rem;
 }
 
-/* Light gray band sections — full-bleed feel within the content column */
+/* Light gray band sections - full-bleed feel within the content column */
 .section--alt > .container {
   background: var(--bg-band);
   border: 1px solid var(--hairline);

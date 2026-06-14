@@ -1,4 +1,4 @@
-# Poll Bot — onboarding site
+# Poll Bot - onboarding site
 
 A polished, fully static onboarding guide for **Poll Bot**, a Telegram scheduling
 bot built in a Google Sheet (Google Apps Script). It walks a non-technical user
@@ -6,7 +6,7 @@ through setup in ~20 minutes.
 
 Lives at: **https://pollbot.urbanalgorithm.com**
 
-Plain HTML + CSS only — no frameworks, no build step (the Inter webfont loads
+Plain HTML + CSS only - no frameworks, no build step (the Inter webfont loads
 from Google Fonts). A tiny bit of optional vanilla JS (mobile nav toggle + copy
 buttons) lives inline in `index.html` and degrades gracefully if JS is disabled.
 
@@ -23,7 +23,7 @@ pollbot-site/
 
 ## Preview locally
 
-Just open `index.html` in a browser — it works straight from disk.
+Just open `index.html` in a browser - it works straight from disk.
 
 Or serve it (closer to production, avoids any file-path quirks):
 
@@ -47,7 +47,7 @@ This site is set up to host on **GitHub Pages** with the custom subdomain
    `pollbot.urbanalgorithm.com` → Save. (The included `CNAME` file already sets
    this; GitHub will verify it.)
 5. Wait for the DNS check to pass, then tick **Enforce HTTPS** (GitHub
-   auto-provisions a free Let's Encrypt certificate — this can take a few
+   auto-provisions a free Let's Encrypt certificate - this can take a few
    minutes).
 
 ### DNS setup
@@ -57,11 +57,11 @@ At the DNS host for `urbanalgorithm.com`, add **one** record:
 - **Type:** `CNAME`
 - **Host / Name:** `pollbot`
 - **Value / Target:** `natedesmond.github.io`
-  — include the trailing dot if your provider requires it.
+  - include the trailing dot if your provider requires it.
 - **TTL:** default / automatic.
 
 This is a subdomain, so a CNAME record is correct. (Only an apex/root domain
-would need A records pointing to GitHub's IP addresses — not the case here.)
+would need A records pointing to GitHub's IP addresses - not the case here.)
 
 Propagation usually takes a few minutes to ~an hour. Verify with:
 

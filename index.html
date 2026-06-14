@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Poll Bot — set up your Telegram scheduling bot in ~20 minutes</title>
-  <meta name="description" content="Poll Bot is a friendly Telegram scheduling bot run from one Google Sheet. It posts RSVP polls, sends reminders, wishes happy birthday, and tracks attendance — no coding required." />
+  <title>Poll Bot - set up your Telegram scheduling bot in ~20 minutes</title>
+  <meta name="description" content="Poll Bot is a friendly Telegram scheduling bot run from one Google Sheet. It posts RSVP polls, sends reminders, wishes happy birthday, and tracks attendance - no coding required." />
   <meta name="theme-color" content="#5e6ad2" />
-  <meta property="og:title" content="Poll Bot — a friendly Telegram scheduling bot" />
+  <meta property="og:title" content="Poll Bot - a friendly Telegram scheduling bot" />
   <meta property="og:description" content="Set it up in about 20 minutes, no coding required. RSVP polls, reminders, birthdays, and attendance tracking from one Google Sheet." />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,8 +30,8 @@
     <div class="container">
       <div class="hero__logo" aria-hidden="true">📊</div>
       <h1>Poll Bot</h1>
-      <p class="hero__tagline">A friendly scheduling bot for your Telegram group — set it up in about 20 minutes, no coding required.</p>
-      <p class="hero__desc">It posts RSVP polls before each meeting, sends reminders, wishes people happy birthday, and tracks attendance automatically — all driven from one Google Sheet.</p>
+      <p class="hero__tagline">A friendly scheduling bot for your Telegram group - set it up in about 20 minutes, no coding required.</p>
+      <p class="hero__desc">It posts RSVP polls before each meeting, sends reminders, wishes people happy birthday, and tracks attendance automatically - all driven from one Google Sheet.</p>
       <p class="hero__audience">Perfect for a church discipleship group (DG), a small group / community group (CG), a sports team, a club, or any group that meets on a schedule.</p>
       <div class="hero__cta">
         <a class="btn btn--primary" href="https://docs.google.com/spreadsheets/d/1-Rb3YjKW17p5A1QzJ-YvjGC64wqtXET6XEJggYZOXBg/copy" target="_blank" rel="noopener">📄 Make your copy of the Poll Bot sheet</a>
@@ -67,7 +67,7 @@
           <div class="feature">
             <div class="feature__icon" aria-hidden="true">📊</div>
             <h3>Auto RSVP polls</h3>
-            <p>Posts a poll before every event — “Coming / Not coming / Joining online…”.</p>
+            <p>Posts a poll before every event - “Coming / Not coming / Joining online…”.</p>
           </div>
           <div class="feature">
             <div class="feature__icon" aria-hidden="true">⏰</div>
@@ -88,7 +88,7 @@
 
         <div class="callout callout--note">
           <span class="callout__label">📝 Note</span>
-          <p>Everything is controlled from tabs in your copy of the sheet — you never touch the code.</p>
+          <p>Everything is controlled from tabs in your copy of the sheet - you never touch the code.</p>
         </div>
       </div>
     </section>
@@ -100,7 +100,7 @@
         <p class="section__lead">Two things, and about 20 minutes.</p>
         <ul class="facts">
           <li><span aria-hidden="true">①</span><span>A <b>Telegram account</b>.</span></li>
-          <li><span aria-hidden="true">②</span><span>The <b>Telegram group</b> where the bot should post — or create a new one.</span></li>
+          <li><span aria-hidden="true">②</span><span>The <b>Telegram group</b> where the bot should post - or create a new one.</span></li>
           <li><span aria-hidden="true">⏱️</span><span><b>Time needed:</b> roughly 20 minutes, start to finish.</span></li>
         </ul>
       </div>
@@ -125,10 +125,10 @@
               <h3>Make your own copy of the sheet</h3>
             </div>
             <div class="step__body prose">
-              <p>Click the <strong>“Make your copy”</strong> button above. Give it a name (e.g. <em>“Friday DG — Poll Bot”</em>). From now on you only work in <strong>your</strong> copy.</p>
+              <p>Click the <strong>“Make your copy”</strong> button above. Give it a name (e.g. <em>“Friday DG - Poll Bot”</em>). From now on you only work in <strong>your</strong> copy.</p>
               <div class="callout callout--note">
                 <span class="callout__label">📝 Note</span>
-                <p>Making a copy automatically brings the code (the “Apps Script”) with it — <strong>but the automatic schedule does not copy over</strong>. You’ll switch it on in <a href="#step6">Step 6</a>.</p>
+                <p>Making a copy automatically brings the code (the “Apps Script”) with it - <strong>but the automatic schedule does not copy over</strong>. You’ll switch it on in <a href="#step6">Step 6</a>.</p>
               </div>
             </div>
           </article>
@@ -140,10 +140,10 @@
               <h3>Create your Telegram bot</h3>
             </div>
             <div class="step__body prose">
-              <p>In Telegram, open a chat with <code>@BotFather</code>. Send <code>/newbot</code> and follow the prompts — you’ll pick a name and a username ending in <em>“bot”</em>. BotFather replies with a <strong>bot token</strong> that looks like <code>1234567890:AAH…xyz</code>.</p>
+              <p>In Telegram, open a chat with <code>@BotFather</code>. Send <code>/newbot</code> and follow the prompts - you’ll pick a name and a username ending in <em>“bot”</em>. BotFather replies with a <strong>bot token</strong> that looks like <code>1234567890:AAH…xyz</code>.</p>
               <div class="callout callout--warn">
                 <span class="callout__label">⚠️ Warning</span>
-                <p>Keep this token private — it’s the password to your bot.</p>
+                <p>Keep this token private - it’s the password to your bot.</p>
               </div>
 
             </div>
@@ -171,12 +171,12 @@
               <h3>Find your group’s ID</h3>
             </div>
             <div class="step__body prose">
-              <p>In the group, send any message (e.g. <em>“hello”</em>). Then, in a browser, visit this URL — replacing <code>&lt;TOKEN&gt;</code> with your bot token:</p>
+              <p>In the group, send any message (e.g. <em>“hello”</em>). Then, in a browser, visit this URL - replacing <code>&lt;TOKEN&gt;</code> with your bot token:</p>
               <div class="snippet">
                 <code>https://api.telegram.org/bot&lt;TOKEN&gt;/getUpdates</code>
                 <button class="snippet__copy" type="button" data-copy="https://api.telegram.org/bot<TOKEN>/getUpdates">Copy</button>
               </div>
-              <p>Look for <code>"chat":{"id":-100…}</code> — that negative number is your <strong>Group ID</strong> (groups usually start with <code>-100</code>).</p>
+              <p>Look for <code>"chat":{"id":-100…}</code> - that negative number is your <strong>Group ID</strong> (groups usually start with <code>-100</code>).</p>
               <div class="callout callout--tip">
                 <span class="callout__label">💡 Tip</span>
                 <p>Easier alternative: add <code>@RawDataBot</code> to the group briefly; it prints the chat ID. Then remove it.</p>
@@ -194,8 +194,8 @@
             <div class="step__body prose">
               <p>Go to the <strong>Settings</strong> tab of your copy:</p>
               <ul>
-                <li>Paste your bot token into the <strong>“Telegram Bot ID”</strong> field — cell <span class="cell-ref">E28</span>.</li>
-                <li>Paste your Group ID into the <strong>“Telegram Group ID”</strong> field — cell <span class="cell-ref">E29</span>.</li>
+                <li>Paste your bot token into the <strong>“Telegram Bot ID”</strong> field - cell <span class="cell-ref">E28</span>.</li>
+                <li>Paste your Group ID into the <strong>“Telegram Group ID”</strong> field - cell <span class="cell-ref">E29</span>.</li>
               </ul>
 
             </div>
@@ -208,8 +208,8 @@
               <h3>Authorize and turn on the schedule</h3>
             </div>
             <div class="step__body prose">
-              <p>Reload the sheet. A new menu — <strong>“Small Group Assistant”</strong> — appears in the top bar.</p>
-              <p>Click <strong>Small Group Assistant → Send Poll Manually</strong>. The first time, Google asks you to <strong>authorize the script</strong> — approve it (it’s your own copy).</p>
+              <p>Reload the sheet. A new menu - <strong>“Small Group Assistant”</strong> - appears in the top bar.</p>
+              <p>Click <strong>Small Group Assistant → Send Poll Manually</strong>. The first time, Google asks you to <strong>authorize the script</strong> - approve it (it’s your own copy).</p>
               <div class="callout callout--note">
                 <span class="callout__label">📝 Note</span>
                 <p>If you see <em>“Google hasn’t verified this app,”</em> click <strong>Advanced → Go to (project) → Allow</strong>. This is normal for personal Apps Scripts.</p>
@@ -217,8 +217,8 @@
 
               <p>Now turn on the daily schedule: <strong>Extensions → Apps Script</strong> → click the <strong>clock icon (Triggers)</strong> → <strong>Add Trigger</strong>, twice:</p>
               <ul>
-                <li><strong>Trigger 1:</strong> function <code>morningTasks</code> — Time-driven, Day timer, e.g. <strong>7–8&nbsp;am</strong>.</li>
-                <li><strong>Trigger 2:</strong> function <code>eveningTasks</code> — Time-driven, Day timer, e.g. <strong>8–9&nbsp;pm</strong>.</li>
+                <li><strong>Trigger 1:</strong> function <code>morningTasks</code> - Time-driven, Day timer, e.g. <strong>7–8&nbsp;am</strong>.</li>
+                <li><strong>Trigger 2:</strong> function <code>eveningTasks</code> - Time-driven, Day timer, e.g. <strong>8–9&nbsp;pm</strong>.</li>
               </ul>
               <div class="callout callout--tip">
                 <span class="callout__label">💡 What each one does</span>
@@ -235,15 +235,15 @@
               <h3>Fill in your own content</h3>
             </div>
             <div class="step__body prose">
-              <p><strong>Calendar tab</strong> — each row is one meeting:</p>
+              <p><strong>Calendar tab</strong> - each row is one meeting:</p>
               <ul>
-                <li><strong>Date</strong> — the meeting date (the bot looks at the next event within 30 days).</li>
-                <li><strong>Poll Question</strong> — what the poll asks (leave blank to skip the poll that date).</li>
-                <li><strong>Answer 1–6</strong> — the RSVP options (Answers 2–6 are optional).</li>
-                <li><strong>Reminder</strong> (far-right column) — the message sent on reminder day, if reminders are on.</li>
+                <li><strong>Date</strong> - the meeting date (the bot looks at the next event within 30 days).</li>
+                <li><strong>Poll Question</strong> - what the poll asks (leave blank to skip the poll that date).</li>
+                <li><strong>Answer 1–6</strong> - the RSVP options (Answers 2–6 are optional).</li>
+                <li><strong>Reminder</strong> (far-right column) - the message sent on reminder day, if reminders are on.</li>
               </ul>
 
-              <p><strong>Birthdays tab</strong> (optional) — a row per person: Name, Day, Month, optional Year, and a note. On someone’s birthday the bot posts your birthday message.</p>
+              <p><strong>Birthdays tab</strong> (optional) - a row per person: Name, Day, Month, optional Year, and a note. On someone’s birthday the bot posts your birthday message.</p>
 
               <p><strong>Settings tab preferences:</strong></p>
               <ul>
@@ -268,7 +268,7 @@
 
         <div class="callout callout--tip">
           <span class="callout__label">💡 Why bother</span>
-          <p>You can learn and experiment freely — try polls, reminders and birthdays — without spamming your real group while you figure things out.</p>
+          <p>You can learn and experiment freely - try polls, reminders and birthdays - without spamming your real group while you figure things out.</p>
         </div>
 
         <div class="prose">
@@ -285,7 +285,7 @@
           <p><strong>Small Group Assistant → Send Poll Manually.</strong> Confirm the poll appears in your test group, and vote on it from your account(s).</p>
 
           <h3>5. Test attendance collection</h3>
-          <p>Run it again later — or run the <code>eveningTasks</code> function directly: open <strong>Extensions → Apps Script</strong>, pick <code>eveningTasks</code> in the function dropdown, click <strong>Run</strong>. Then check that the <strong>Poll Responses / Attendance</strong> tabs fill in.</p>
+          <p>Run it again later - or run the <code>eveningTasks</code> function directly: open <strong>Extensions → Apps Script</strong>, pick <code>eveningTasks</code> in the function dropdown, click <strong>Run</strong>. Then check that the <strong>Poll Responses / Attendance</strong> tabs fill in.</p>
 
           <h3>6. Test reminders</h3>
           <p>In <strong>Settings</strong>, set <em>“Send reminders?”</em> to <strong>On</strong> and reminder days to <code>0</code>. In the Apps Script editor, run the <code>morningTasks</code> function and confirm a reminder posts (it replies to the poll).</p>
@@ -303,7 +303,7 @@
 
           <div class="callout callout--tip">
             <span class="callout__label">💡 Tip</span>
-            <p>If you used one bot for both, you don’t need a new token — just switch the Group ID. If you’d rather fully isolate testing, create a separate test bot with its own token via <code>@BotFather</code>.</p>
+            <p>If you used one bot for both, you don’t need a new token - just switch the Group ID. If you’d rather fully isolate testing, create a separate test bot with its own token via <code>@BotFather</code>.</p>
           </div>
         </div>
       </div>
@@ -321,7 +321,7 @@
         </ul>
         <div class="callout callout--warn">
           <span class="callout__label">⚠️ Warning</span>
-          <p>Don’t delete old polls in the <strong>Polls Sent / Poll Responses</strong> tabs — it can corrupt past attendance records. Hide rows instead.</p>
+          <p>Don’t delete old polls in the <strong>Polls Sent / Poll Responses</strong> tabs - it can corrupt past attendance records. Hide rows instead.</p>
         </div>
       </div>
     </section>
@@ -346,7 +346,7 @@
           </div>
           <div class="trouble__item">
             <dt>Nothing happens automatically</dt>
-            <dd>Re-check the two <strong>time-driven triggers</strong> — they don’t copy over with the sheet.</dd>
+            <dd>Re-check the two <strong>time-driven triggers</strong> - they don’t copy over with the sheet.</dd>
           </div>
           <div class="trouble__item">
             <dt>Second poll won’t send</dt>
@@ -368,7 +368,7 @@
           <li><input type="checkbox" id="c4" /><label for="c4">Calendar filled a few weeks ahead</label></li>
           <li><input type="checkbox" id="c5" /><label for="c5">(If sharing this as a template to others) sheet shared “Anyone with the link → Viewer”</label></li>
         </ul>
-        <p class="closing-line">Keep your bot token private — if it leaks, go to <code>@BotFather</code> → your bot → <strong>Revoke token</strong>, then paste the new one into Settings.</p>
+        <p class="closing-line">Keep your bot token private - if it leaks, go to <code>@BotFather</code> → your bot → <strong>Revoke token</strong>, then paste the new one into Settings.</p>
       </div>
     </section>
 
@@ -380,7 +380,7 @@
   <footer class="site-footer">
     <div class="container">
       <p>Poll Bot · made with <span class="heart" aria-hidden="true">♥</span><span class="visually-hidden">love</span> by Urban Algorithm</p>
-      <p>This page is a living guide — it may be updated as the bot improves.</p>
+      <p>This page is a living guide - it may be updated as the bot improves.</p>
       <p>Questions? Reach out to your group’s Poll Bot admin.</p>
     </div>
   </footer>
@@ -406,7 +406,7 @@
       }
 
       // Scroll-spy: highlight the current section in the sidebar TOC.
-      // Pure progressive enhancement — degrades gracefully without JS / support.
+      // Pure progressive enhancement - degrades gracefully without JS / support.
       if (links && 'IntersectionObserver' in window) {
         var tocLinks = links.querySelectorAll('a[href^="#"]');
         var byId = {};
